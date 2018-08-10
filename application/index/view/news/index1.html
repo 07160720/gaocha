@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>{$news_find.title}</title>
+	<meta name="keywords" content="{$news_find.keywords}">
+	<meta name="description" content="{$news_find.desc}">
+	<link rel="stylesheet" href="__INDEX__/css/gc.css" />
+	<script type="text/javascript" src="__INDEX__/js/gc.js" ></script>
+	<script type="text/javascript" src="__INDEX__/js/jquery.js"></script>
+	<script type="text/javascript" src="__INDEX__/js/jquery.min.js"></script>
+	<style type="text/css">
+	a:link {
+		font-size: 16px;
+		color: #000000;
+		text-decoration: none;
+	}
+	a:visited {
+		font-size: 16px;
+		color: #000000;
+		text-decoration: none;
+	}
+	a:hover {
+		font-size: 16px;
+		color: red;
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+	<!-- 頭部 -->
+	{include file="common/header"}
+	<!--/頭部 -->
+	<span style="position: relative; top: 50px; left: 400px;">当前位置：<a href="http://www.sysnaica.com.cn">首页</a>&gt;<a href="{:url('news/index')}">{$cate_find.catename}</a>&gt;{$news_find.title}</span>	
+	<section>	
+		<div style="position: relative; height: 800px; top: 30px; bottom: 50px;">
+			<div class="div1">
+				<h3>{$news_find.title}</h3>
+				<div style=" position: relative; left: 450px; margin: 0 auto; top: 0px; bottom: 30px;">日期：{$news_find['time']|date="Y-m-d",###}&nbsp;浏览数：{$news_find['click']}</div>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$news_find.content}</p>
+			</div>
+		</div>
+	</section>
+	<!-- 腳部 -->
+	{include file="common/footer"}
+	<!--/腳部 --> 
+</body>
+</html>

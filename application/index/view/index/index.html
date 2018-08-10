@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>搞茶_搞茶加盟费_搞茶加盟官网</title>
+		<meta name="keywords" content="搞茶_搞茶加盟费_搞茶加盟官网">
+        <meta name="description" content="这里，没有茶单，却有数以亿计的茶品类。LABOTHERY搞茶，一杯充满无限想象力与惊喜的茶！一款具有社交属性的互联网属性的茶饮品牌！一款极好缓解社会普遍性人际焦虑的趣味茶！茶+双色球1/12759183360概率味道=搞茶！">
+		<link rel="stylesheet" href="__INDEX__/css/gc.css" />
+		<script type="text/javascript" src="__INDEX__/js/gc.js" ></script>
+		<script type="text/javascript" src="__INDEX__/js/jquery.js"></script>
+		<script type="text/javascript" src="__INDEX__/js/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		<!-- 頭部 -->
+		{include file="common/header"}
+		<!--/頭部 -->
+		<img class="fm" src="__INDEX__/img/banner_01.jpg" />
+		<section>
+			<div class="div1">
+			<h3>搞茶总部</h3>
+			<div class="line" ></div>
+            {volist name="Head_select" id="vo"}
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.desc}</p>
+			{/volist}
+			</div>
+			<div class="div2">
+			<h3>产品展示</h3>
+			<div class="line"></div>
+             {volist name="produce_select" id="vo"}
+			    <table><tr><td><img src="http://www.sysnaica.com.cn__IMG__{$vo.pic}" /></td><tr><tr><td><a href="#"><h3>搞茶产品</h3></a></td></tr></table>
+             {/volist}
+			</div>
+			</div>
+
+			<div class="div3">
+				<h3>新闻动态</h3>
+				<div class="line"></div>
+				<div class="div3_1">
+					
+					{volist name="news_select" id="vo"}	
+                       
+					<a href="{:url('news/index1',array('newsid'=>$vo['id']))}"><p>{$vo.title}</p></a>
+					<div>{$vo['time']|date="Y-m-d",###}</div>
+					<div class="c">{$vo.desc}</div>
+					{/volist}
+				</div>
+			</div>
+			<!-- // 更多的标签 -->
+			<div style="float: right; position: relative; right: 150px; bottom: 90px;"><a href="{:url('news/index')}" style="text-decoration:none"><p style="color: red;">更多>></p></a></div>
+           
+			<div class="div4" style="position: relative; top: 30px;">
+			<h3>成功案例</h3>
+			<div class="line"></div>
+			<div class="div4_1">
+			{volist name="successful_select" id="vo"}
+			<a href="{:url('successful/index1',array('id'=>$vo['id']))}"><p>{$vo.title}</p></a>
+			<span>{$vo.desc}</span>
+			{/volist}
+			</div>
+			</div>
+			<!-- // 更多的标签 -->
+			<div style="float: right; position: relative; right: 250px; bottom: 10px;"> <a href="{:url('successful/index')}" style="text-decoration:none"><p style="color: red;">更多>></p></a></div>
+			<div class="div5">
+			<h3>加盟支持</h3>
+			<div class="line"></div>
+			<div class="a">
+			<p>开业前</p>
+			<ul>
+				{volist name="support" id="vo"}
+				{if condition="$vo.desc1 neq null"}
+				<a><li>{$vo.desc1}</li></a>
+				{else /}
+				{/if}
+				{/volist}
+			</ul>
+			</div>
+			<div class="a">
+			<p>开业中</p>
+			<ul>
+				{volist name="support" id="vo"}
+				{if condition="$vo.desc2 neq null"}
+				<a><li>{$vo.desc2}</li></a>
+				{else /}
+				{/if}
+				{/volist}
+			</ul>
+			</div>
+			<div class="a">
+			<p>开业后</p>
+			<ul>
+				{volist name="support" id="vo"}
+				{if condition="$vo.desc3 neq null"}
+				<a><li>{$vo.desc3}</li></a>
+				{else /}
+				{/if}
+				{/volist}
+			</ul>
+			</div>
+			
+			<div class="div6">
+			<h3>加盟流程</h3>
+			<div class="line"></div>
+			<ul>
+				{volist name="process" id="vo"}
+				<li>{$vo.process}</li>
+				{/volist}
+			</ul>
+			
+			<div class="div7">
+			<h3>媒体合作</h3>
+			<div class="line"></div>
+			<div class="b">
+				<img src="__INDEX__/img/media1.jpg" />
+				<img src="__INDEX__/img/media2.jpg" />
+				<img src="__INDEX__/img/media3.jpg" />
+				<img src="__INDEX__/img/media4.jpg" />
+				<img src="__INDEX__/img/media5.jpg" />
+				<img src="__INDEX__/img/media6.jpg" />
+			</div>
+			
+			<div class="div8">
+			<img src="__INDEX__/img/formTile.jpg"/></br></br></br></br>
+			<div>如果您有任何疑问请在LABOTHERY搞茶加盟官网留言，搞茶会在收到留言后24小时内联系您</div>
+			<form>
+				<p>*您的姓名：<input type="text" name="name" class="name" /></p>
+				<p>*联系电话：<input type="text" name="phonenumber" class="phonenumber"/></p>
+				<p> 您的地址：<input type="text" name="address" class="address" /></p>
+				<p>*留言内容：<textarea placeholder="请留言..." name="message" class="message"></textarea></p>
+				<p><button type="button" id="subleave">立即留言</button></p>
+			</form>
+			</div>
+		</section>
+		<!-- 腳部 -->
+		{include file="common/footer"}
+		<!--/腳部 -->
+		<script type="text/javascript">
+			$('#subleave').on('click',function(){
+				 // 獲取對應的值
+				  var name = $('.name').val();
+				  var phonenumber = $('.phonenumber').val();
+				  var address = $('.address').val();
+				  var message = $('.message').val();
+				  // 發送ajax請求，對於在四個參數，url，data，type，datatype
+				  $.ajax({
+				  	url:"{:url('index/leave')}",
+				  	data:{
+				  		name:name,
+				  		phonenumber:phonenumber,
+				  		address:address,
+				  		message:message,
+				  	},
+				  	type:'post',
+				  	dataType:'json',
+				  	success:function(res)     // 執行成功回調函數
+				  	{ 
+                        if (res.code==1) 
+                        {
+                             alert(res.msg);
+                        }
+                        else{
+                        	 alert(res.msg);
+                        }
+				  	}     
+				 })
+			})
+		</script>
+        
+	</body>
+</html>

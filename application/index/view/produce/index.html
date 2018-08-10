@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>搞茶_搞茶加盟官网</title>
+		<meta name="keywords" content="搞茶_搞茶加盟官网">
+        <meta name="description" content="我们崇尚专注一生的事业，更欣赏轻松融洽的氛围。搞茶一场甜蜜事业的旅行和华丽冒险的开始，在搞茶官网，是以一种美食主义者的姿态生存，每月定期推出新品，为顾客不断带来惊喜。">
+		<link rel="stylesheet" href="__INDEX__/css/gc.css" />
+		<script type="text/javascript" src="__INDEX__/js/gc.js" ></script>
+		<script type="text/javascript" src="__INDEX__/js/jquery.js"></script>
+		<script type="text/javascript" src="__INDEX__/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- 頭部 -->
+		{include file="common/header"}
+		<!--/頭部 -->
+		{include file="common/content"}
+		<section>
+          <main>
+			<div class="div2" style="position: relative; height: 700px; bottom: 90px; top: 5px;">
+			<h3>产品展示</h3>
+			<div class="line"></div>
+			   {volist name="produce_select" id="vo"}
+			   <table><tr><td><img src="http://www.sysnaica.com.cn__IMG__{$vo.pic}" /></td><tr><tr><td><a href="#"><h3>搞茶产品</h3></a></td></tr></table>
+			   {/volist}
+			</div>
+		  </main>	
+		</section>
+		<hr/>
+		<!-- 腳部 -->
+		{include file="common/footer"}
+		<!--/腳部 -->  
+	</body>
+</html>

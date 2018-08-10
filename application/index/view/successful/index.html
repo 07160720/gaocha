@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>成功案例</title>
+		<meta name="keywords" content="招商 搞茶">
+        <meta name="description" content="自上世纪八十年代，奶茶引进中国以来，就在国内的美食界掀起了一阵火热狂潮。新颖时尚的外形、美味的口感、创新的出餐模式，无一不成为吸睛的焦点。外酥里嫩的炸鸡、有料满足的奶茶实验室 、金黄脆香的薯条...">
+		<link rel="stylesheet" href="__INDEX__/css/gc.css" />
+		<script type="text/javascript" src="__INDEX__/js/gc.js" ></script>
+		<script type="text/javascript" src="__INDEX__/js/jquery.js"></script>
+		<script type="text/javascript" src="__INDEX__/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- 頭部 -->
+		{include file="common/header"}
+		<!--/頭部 -->
+		{include file="common/content"}
+		<section>
+			<div style="position: relative;  height: 1150px; top: 50px; bottom: 30px; left: 30px;">
+				<div class="div4" style="position: relative; top: 30px;">
+					<h3>成功案例</h3>
+					<div class="line"></div>
+					<div class="div4_1">
+						{volist name="successful_select" id="vo"}
+						<a href="{:url('successful/index1',array('id'=>$vo['id']))}"><p>{$vo.title}</p></a>
+						<span>{$vo.desc}</span>
+						{/volist}
+					</div>
+				</div>
+			</div>
+			<div style="position: relative; float: right; right: 250px; bottom: 300px;">{$successful_select->render()}
+			</div>
+		</section>
+		<!-- 腳部 -->
+		{include file="common/footer"}
+		<!--/腳部 -->
+	</body>
+</html>
